@@ -11699,3 +11699,15 @@ body {
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
 }
+
+/* Scripts personalizados */
+
+#layoutAuthentication{
+  main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

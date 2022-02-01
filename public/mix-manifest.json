@@ -1,5 +1,6 @@
 {
     "/admin/assets/js/scripts.js": "/admin/assets/js/scripts.js",
+    "/admin/assets/js/bootstrap.min.js": "/admin/assets/js/bootstrap.min.js",
     "/admin/assets/css/style.css": "/admin/assets/css/style.css",
     "/admin/assets/fontawesome/js/fontawesome.min.js": "/admin/assets/fontawesome/js/fontawesome.min.js",
     "/admin/assets/fontawesome/css/fontawesome.min.css": "/admin/assets/fontawesome/css/fontawesome.min.css",
