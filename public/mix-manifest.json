@@ -18,5 +18,7 @@
     "/admin/assets/fontawesome/webfonts/fa-solid-900.svg": "/admin/assets/fontawesome/webfonts/fa-solid-900.svg",
     "/admin/assets/fontawesome/webfonts/fa-solid-900.ttf": "/admin/assets/fontawesome/webfonts/fa-solid-900.ttf",
     "/admin/assets/fontawesome/webfonts/fa-solid-900.woff": "/admin/assets/fontawesome/webfonts/fa-solid-900.woff",
-    "/admin/assets/fontawesome/webfonts/fa-solid-900.woff2": "/admin/assets/fontawesome/webfonts/fa-solid-900.woff2"
+    "/admin/assets/fontawesome/webfonts/fa-solid-900.woff2": "/admin/assets/fontawesome/webfonts/fa-solid-900.woff2",
+    "/admin/assets/js/jquery.min.js": "/admin/assets/js/jquery.min.js",
+    "/admin/assets/js/sweertalert2.min.js": "/admin/assets/js/sweertalert2.min.js"
 }

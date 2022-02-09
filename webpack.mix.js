@@ -18,4 +18,6 @@ mix.js('resources/views/admin/layout/assets/js/bootstrap.min.js', 'admin/assets/
 mix.copy('node_modules/fontawesome-free/js/all.min.js', 'public/admin/assets/fontawesome/js/fontawesome.min.js');
 mix.copy('node_modules/fontawesome-free/css/all.min.css', 'public/admin/assets/fontawesome/css/fontawesome.min.css');
 mix.copyDirectory('node_modules/fontawesome-free/webfonts', 'public/admin/assets/fontawesome/webfonts');
+mix.copyDirectory('node_modules/jquery/dist/jquery.min.js', 'public/admin/assets/js/jquery.min.js');
+mix.copyDirectory('node_modules/sweetalert2/dist/sweetalert2.all.min.js', 'public/admin/assets/js/sweertalert2.min.js');
 /* Fim admin depencias */

@@ -13,6 +13,9 @@
 
     <!-- JS -->
     <script src="{{ asset('admin/assets/fontawesome/js/fontawesome.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('admin/assets/js/bootstrap.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('admin/assets/js/jquery.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('admin/assets/js/sweetalert2.min.js') }}" crossorigin="anonymous"></script>
 </head>
 
 <body class="sb-nav-fixed">
@@ -118,8 +121,8 @@
     </div>
 
     <!-- JS -->
-    <script src="{{ asset('admin/assets/js/bootstrap.min.js') }}" crossorigin="anonymous"></script>
     <script src="{{ asset('admin/assets/js/scripts.js') }}" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
