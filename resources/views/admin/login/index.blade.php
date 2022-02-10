@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <title>Admin - Login</title>
 
     <!-- CSS -->
@@ -27,18 +28,16 @@
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Login Administrativo</h3>
+                                    <h3 class="text-center font-weight-light my-4">{{ env('APP_NAME') }}</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form>
+                                    <form id="login">
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputEmail" type="email"
-                                                placeholder="name@example.com" />
+                                            <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" />
                                             <label for="inputEmail">Email</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputPassword" type="password"
-                                                placeholder="Password" />
+                                            <input class="form-control" id="password" name="password" type="password" placeholder="Password" />
                                             <label for="inputPassword">Senha</label>
                                         </div>
                                         <div class="form-check mb-3">
@@ -48,7 +47,7 @@
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                             <a class="small" href="password.html">Esqueci minha senha!</a>
-                                            <a class="btn btn-primary" href="index.html">Login</a>
+                                            <button type="submit" class="btn btn-primary">Login</button>
                                         </div>
                                     </form>
                                 </div>
@@ -65,7 +64,39 @@
 
     <script>
         $( document ).ready(function() {
-            
+           
+            $("#login").submit( (e) => {
+                e.preventDefault();
+
+                jQuery.ajaxSetup({
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                    },
+                });
+
+                var form = new FormData($('#login')[0]);
+
+                jQuery.ajax({
+                    type: "POST",
+                    url: "{{ URL::to('/') }}/admin/login",
+                    data: form,
+                    contentType: false,
+                    processData: false,
+                    statusCode: {
+                        200: () => {
+                            window.location.href = "{{ URL::to('/') }}/admin/dashboard";
+                        },
+                        500: () => {
+                            Swal.fire(
+                                'O servidor reportou um erro, tente novamente',
+                                '',
+                                'error'
+                            )
+                        }
+                    }
+                });
+            });
+
         });
     </script>
 </body>
