@@ -27,6 +27,6 @@ Route::prefix('admin')->group(function () {
         return view('admin.login.index');
     })->name('admin.login');
 
-    Route::post('/login', 'App\Http\Controllers\LoginController@authenticate')->name('admin.login');
+    Route::post('/login', 'App\Http\Controllers\authController@auth')->name('admin.login');
 
 });
