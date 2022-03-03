@@ -20,7 +20,7 @@ Route::get('/', function () {
 Route::prefix('admin')->group(function () {
     
     Route::get('/dashboard', function () {
-        return view('admin.dashboard');
+        return view('admin.dashboard.index');
     })->name('admin.dashboard');
 
     Route::get('/login', function () {

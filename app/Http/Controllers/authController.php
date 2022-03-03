@@ -11,9 +11,9 @@ class authController extends Controller
 public function auth(Request $request) {
     
     $authService = new authService();
-    return $authService->login($request);
+    $data = $authService->login($request);
     
-    // return response($request, 200);
+    return response($data, $data['status']);
 }
 
 }

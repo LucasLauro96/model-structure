@@ -10,6 +10,7 @@ class authRepository
         $userModel = new User();
 
         return $userModel->select(
+            'id',
             'name',
             'email',
             'password'

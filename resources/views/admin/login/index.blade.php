@@ -86,6 +86,13 @@
                         200: () => {
                             window.location.href = "{{ URL::to('/') }}/admin/dashboard";
                         },
+                        404: function(res) {
+                            Swal.fire(
+                                'Usuario invalido',
+                                'Confira os dados de acesso e tente novamente!!!',
+                                'error'
+                            )
+                        },
                         500: () => {
                             Swal.fire(
                                 'O servidor reportou um erro, tente novamente',
