@@ -27,7 +27,8 @@ Route::prefix('admin')->group(function () {
         return view('admin.login.index');
     })->name('admin.login');
 
-    Route::get('/pessoas', 'App\Http\Controllers\personController@index')->name('admin.person.index');
+    /* Pessoas - Persons */
+    Route::resource('pessoas', 'App\Http\Controllers\personController');
 
     Route::post('/login', 'App\Http\Controllers\authController@auth')->name('admin.login');
 

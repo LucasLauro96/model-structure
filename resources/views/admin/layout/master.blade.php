@@ -56,7 +56,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Dashboard
                         </a>
-                        <a class="nav-link" href="{{ route('admin.person.index') }}">
+                        <a class="nav-link" href="{{ route('pessoas.index') }}">
                             <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                             Pessoas
                         </a>
